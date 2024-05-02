@@ -1,0 +1,5 @@
+include: "_default_template_yaml"
+dataset_kwargs:
+  data_files:
+    test: "/cb/ml/alexv/cerebras_experiments/eleuther_harness_v3/Compiler_kernel.jsonl"
+task: "cerebras_compiler_kernel"
