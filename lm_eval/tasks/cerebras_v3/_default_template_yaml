@@ -7,9 +7,19 @@ output_type: multiple_choice
 doc_to_text: !function utils.doc_to_text
 doc_to_choice: !function utils.doc_to_choice
 doc_to_target: answer
+process_results: !function utils.process_results
 metric_list:
   - metric: acc
     aggregation: mean
     higher_is_better: true
+  - metric: perplexity
+    aggregation: mean
+    higher_is_better: false
+  - metric: pos_margin
+    higher_is_better: true
+    aggregation: mean
+  - metric: neg_margin
+    higher_is_better: false
+    aggregation: mean
 metadata:
   version: 0.1
