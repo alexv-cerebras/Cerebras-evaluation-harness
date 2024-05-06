@@ -492,7 +492,11 @@ def evaluate(
                         ]:
                             stderr = "_stderr,".join(metric.split(","))
                             stderr_score = results[task][stderr]
-                            var_score = stderr_score**2
+                            
+                            if isinstance(stderr_score, str):
+                                var_score = 0
+                            else:
+                                var_score = stderr_score**2
                             metric_score = results[task][metric]
 
                             all_stderr.append(stderr)

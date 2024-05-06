@@ -15,6 +15,9 @@ metric_list:
   - metric: perplexity
     aggregation: mean
     higher_is_better: false
+  - metric: roc_auc
+    aggregation: !function utils.aggregate_auc
+    higher_is_better: true
   - metric: pos_margin
     higher_is_better: true
     aggregation: mean
